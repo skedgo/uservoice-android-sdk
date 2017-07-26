@@ -4,23 +4,16 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.1'
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
-apply plugin: 'maven'
- 
-uploadArchives {
-    repositories.mavenDeployer {
-        pom.groupId = 'com.uservoice'
-        pom.artifactId = 'uservoice-android-sdk'
-        pom.version = '1.2.5'
-        // Add other pom properties here if you want (developer details / licenses)
-        repository(url: "file:///Users/shaund/tmp/")
-    }
-}
+group='com.github.skedgo'
+version = '1.2.6'
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
@@ -32,12 +25,13 @@ artifacts {
 }
 
 repositories {
+    maven { url "https://maven.google.com" }
     mavenCentral()
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.3'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
 
     sourceSets {
         main {
@@ -47,12 +41,15 @@ android {
             res.srcDirs = ['res']
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     // compile 'com.android.support:support-v4:21.+'
-    compile 'com.android.support:support-core-utils:24.2.1'
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-core-utils:26.0.0'
+    compile 'com.android.support:appcompat-v7:26.0.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'oauth.signpost:signpost-core:1.2.1.2'
 }
