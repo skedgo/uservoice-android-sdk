@@ -1,3 +1,1 @@
-include ':UVDemo'
-include ':uservoice-android-sdk'
-project(':uservoice-android-sdk').projectDir = new File('UserVoiceSDK')
+include ':UserVoiceSDK', ':UVDemo'

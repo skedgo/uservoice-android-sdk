@@ -69,5 +69,5 @@ tasks.whenTaskAdded { theTask ->
 
 dependencies {
     compile 'com.android.support:support-core-utils:26.0.0'
-    compile project(':uservoice-android-sdk')
+    compile project(':UserVoiceSDK')
 }

@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.uservoice'
+group='com.skedgo'
 version = '1.2.5'
 
 task sourcesJar(type: Jar) {
