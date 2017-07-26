@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -32,7 +33,7 @@ public class CommentDialogFragment extends DialogFragmentBugfixed {
         this.suggestionDialog = suggestionDialog;
     }
 
-    @Override
+    @NonNull @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         if (!Utils.isDarkTheme(getActivity())) {
@@ -45,8 +46,8 @@ public class CommentDialogFragment extends DialogFragmentBugfixed {
 
         View email = view.findViewById(R.id.uv_email);
         View name = view.findViewById(R.id.uv_name);
-        final EditText emailField = (EditText) email.findViewById(R.id.uv_text_field);
-        final EditText nameField = (EditText) name.findViewById(R.id.uv_text_field);
+        final EditText emailField = email.findViewById(R.id.uv_email_text_field);
+        final EditText nameField = name.findViewById(R.id.uv_name_text_field);
         if (Session.getInstance().getUser() != null) {
             email.setVisibility(View.GONE);
             name.setVisibility(View.GONE);
