@@ -5,22 +5,16 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
-apply plugin: 'maven'
- 
-uploadArchives {
-    repositories.mavenDeployer {
-        pom.groupId = 'com.uservoice'
-        pom.artifactId = 'uservoice-android-sdk'
-        pom.version = '1.2.5'
-        // Add other pom properties here if you want (developer details / licenses)
-        repository(url: "file:///Users/tintran/tmp/")
-    }
-}
+group='com.uservoice'
+version = '1.2.5'
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
