@@ -13,8 +13,8 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.skedgo'
-version = '1.2.5'
+group='com.github.skedgo'
+version = '1.2.6'
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
