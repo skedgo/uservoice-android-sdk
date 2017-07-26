@@ -31,12 +31,12 @@
             <include layout="@layout/uv_header_item_light_no_padding" />
 
             <EditText
-              android:id="@+id/uv_email_text_field"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="@string/uv_email_address"
-              android:inputType="textEmailAddress"
-              android:ems="10" />
+                android:id="@+id/uv_text_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/uv_email_address"
+                android:inputType="textEmailAddress"
+                android:ems="10"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -48,11 +48,11 @@
             <include layout="@layout/uv_header_item_light_no_padding" />
 
             <EditText
-              android:id="@+id/uv_name_text_field"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="@string/uv_name_hint"
-              android:ems="10" />
+                android:id="@+id/uv_text_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/uv_name_hint"
+                android:ems="10"></EditText>
         </LinearLayout>
 
     </LinearLayout>
